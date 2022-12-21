@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_crear.css">
+</head>
+
+<body>
+    <header>
+        <h2>Ender Perez</h2>
+        <a href="#">Datos</a>
+        <a href="#">Configuracion</a>
+        <a href="#">Cerrar Sesion</a>
+    </header>
+    <div>
+
+
+        <h1>CREAR NUEVO PROYECTO</h1>
+
+
+        <input type="text" oninput="setName(this)" placeholder="es ribe tu titulo">
+
+        <input type="text" oninput="setparrafo(this)" placeholder="escribe parrafo">
+
+        <button id="crear" onclick="crear();">Crear</button>
+
+
+    <section id="container">
+    
+        </div>
+        <div id="white-box" class="cuadro_blanco">
+            <h1 id="name-tag">TITULO</h1>
+            <div class="imagen">
+                <p id="parrafo-tag">Parrafo</p>
+                <img id="img_presen"
+                src="https://www.befunky.com/images/prismic/d98b04bd-7bb6-4e31-832f-5800572ce488_how-to_blur-image-21.svg"
+                alt="imagen">
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="container">
+        <h1 class="heading"> buscar imagenes aqui</h1>
+        <input type="text" placeholder="search images" id="search-box">
+
+
+        <div class="image-container">
+            
+            <div class="image" data-title="carro rojo">
+                <img onclick="carro1()" src="img/carro1.png" alt="">
+                <h3> carro rojo </h3>
+            </div>
+
+            <div class="image" data-title="carro azul">
+                <img onclick="carro2()" src="img/carro2.png" alt="">
+                <h3> carro azul </h3>
+            </div>
+
+            <div class="image" data-title="casa rojo">
+                <img src="img/casa1.png" alt="">
+                <h3> casa rojo </h3>
+            </div>
+
+            <div class="image" data-title="casa azul">
+                <img src="img/casa2.png" alt="">
+                <h3> carro rojo </h3>
+            </div>
+
+            <div class="image" data-title="comida rojo">
+                <img src="img/comida2.png" alt="">
+                <h3> comida rojo </h3>
+            </div>
+
+            <div class="image" data-title="comida azul">
+                <img src="img/comida3.png" alt="">
+                <h3> comida azul </h3>
+            </div>
+
+            <button id="crear" onclick="crear();">Crear</button>
+        </div>
+        <div id="secundario">
+
+        </div>
+
+
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="script.js"></script>
+</body>
+
+</html>
