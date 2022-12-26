@@ -21,15 +21,14 @@
 
         <h1>CREAR NUEVO PROYECTO</h1>
 
+        <div class="new-slide-container">
+            <input id="slide-title-input" type="text" oninput="setName(this)" placeholder="escribe tu titulo">
+            <input id="slide-content-input" type="text" oninput="setparrafo(this)" placeholder="escribe parrafo">
+            <button id="crear" onclick="createSlide();">Crear</button>
+        </div>
 
-        <input type="text" oninput="setName(this)" placeholder="es ribe tu titulo">
 
-        <input type="text" oninput="setparrafo(this)" placeholder="escribe parrafo">
-
-        <button id="crear" onclick="crear();">Crear</button>
-
-
-    <section id="container">
+    <section id="slide-preview">
     
         </div>
         <div id="white-box" class="cuadro_blanco">
