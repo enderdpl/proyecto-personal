@@ -62,3 +62,8 @@ img {
 .imagen {
     display: flex;
 }
+
+.selected-slide {
+    border:rgb(6, 139, 139) 10px solid;
+    border-radius: 10px;
+}
