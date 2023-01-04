@@ -1,6 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+
+    
+
 }
 @media (max-width: 767px){
     body {
@@ -19,13 +22,13 @@
 }
 
 
-
 header {
-    background-color: rgb(192, 173, 151);
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
     display: flex;
     width: 200%;
 }
 h2{
+    font-family: 'Dancing Script', cursive;
     margin-right: 300px;
     margin-left: 20px;
     color: rgba(82, 51, 51, 0.896);

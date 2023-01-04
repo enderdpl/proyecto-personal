@@ -53,12 +53,27 @@ function createSlide() {
     
     newSlide.classList.add('slide');
 
-    newSlide.addEventListener('click', function () {
+/*    newSlide.addEventListener('click', function () {
         var id = this.id;
-        alert (id)
-         
+        var h1= document.getElementById("name-tag"+id);
+        alert(h1);
       })
+*/    
+
+    newSlide.children[0].addEventListener('click', function (event) {
+        content_h1= event.path[0].innerText
+        console.log(content_h1)
+        const para = document.createElement("h1");
+        para.innerHTML = content_h1;
+        document.getElementById("slides").appendChild(para);
+    })
+    newSlide.children[1].addEventListener('click', function (event) {
+        console.log(event.target)
+    })
     
+    // newSlide.children[2].addEventListener('click', function (event) {
+    //     console.log(event.target)
+    // })
     
     //nueva cuadro blanco sea original anted de editar
     nameTag.innerHTML= "TITULO";
