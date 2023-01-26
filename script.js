@@ -1,8 +1,11 @@
+
 let slideCounter=1;
 
 var nameTag = document.querySelector("#name-tag");
 var ParrafoTag = document.querySelector("#parrafo-tag");
 var imgPresent= document.getElementById('img_presen');
+var buttonDescarga= document.getElementById("imprime")
+var inside= document.getElementsByClassName("inside")
 
 
 
@@ -44,14 +47,23 @@ function guardar(){
     //event.target.classList.add('selected-slide');
 // }
 
-
+ 
 function createSlide() {
     //Duplicate Element and add to slides containers
     const slideDraft = document.getElementById('slide-draft');
     const newSlide = slideDraft.cloneNode(true);
-    newSlide.id =  `slide-${slideCounter}`;
-    
+    newSlide.id =  `slide${slideCounter}`;
     newSlide.classList.add('slide');
+    //  BOTON DE DESCARGASS
+    
+    buttonDescarga.style.display= "flex"
+
+//FUNCION DE JQUERY PARA QUE DESCARGE EL DIV
+
+
+
+
+
 
 /*    newSlide.addEventListener('click', function () {
         var id = this.id;
@@ -80,7 +92,7 @@ function createSlide() {
     ParrafoTag.innerHTML= "Parrafo";
     imgPresent.src='img/foto.png';
     
-    console.log('slideCounter', slideCounter);
+    console.log(slideCounter);
     
     //document.getElementById("slides").innerHTML += '<div class="cuadro_blanco" id="'+slideCounter+'"> <h1 id="name-tag">TITULO</h1><div class="imagen"><p id="parrafo-tag">Parrafo</p><img id="img_presen" src="https://www.befunky.com/images/prismic/d98b04bd-7bb6-4e31-832f-5800572ce488_how-to_blur-image-21.svg" alt="imagen"></div></div>';
     document.getElementById("slides").append(newSlide);
@@ -93,3 +105,47 @@ function createSlide() {
 
 
 const slides = document.getElementsByClassName("slide");
+
+//FUNCION DE JQUERY PARA QUE DESCARGE EL DIV
+$(document).ready(() => {
+    $("#imprime").click(function () {
+        $.print("#slides")
+    }
+
+    )
+}
+)
+
+// FUNCION QUE PERMITE MOVER LOS ELEMENTOS DE POSCISION DENTRO DEL DIV
+var elementoMoviendose;
+window.addEventListener('load', init);
+function init(){
+        
+        nameTag.addEventListener('dragstart', dragIniciado, false);
+        nameTag.addEventListener('dragend', dragFinalizado, false);
+        nameTag.addEventListener('drag', manejarDrop, false); 
+    }
+
+function dragIniciado(e){
+    elementoMoviendose= this
+    this.style.backgroundColor = 'blue'
+    padre=document.getElementById('slide-draft')
+    var  clon = this.cloneNode(true);
+    padre.appendChild(clon)
+    e.dataTransfer.setData('text', padre.innerHTML)
+    console.log("draf iniciado")
+}
+function manejarDrop(e){
+    e.preventDefault();
+    var datos= e.dataTransfer.getData('text');
+    this.innerHTML += datos;
+    elementoMoviendose.parentNode.removeChild(elementoMoviendose)
+    console.log("draf drof")
+}
+
+function dragFinalizado(e){
+    e.preventDefault();
+    this.style.backgroundColor= 'red'
+    console.log("draf finalizado")
+
+}

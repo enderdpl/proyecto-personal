@@ -4,51 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style_crear.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
-    <style> @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); </style>
+    <link rel="stylesheet" href="/CSS/style_crear.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.print/1.6.2/jQuery.print.min.js"
+        integrity="sha512-t3XNbzH2GEXeT9juLjifw/5ejswnjWWMMDxsdCg4+MmvrM+MwqGhxlWeFJ53xN/SBHPDnW0gXYvBx/afZZfGMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
 </head>
 
 <body>
     <header>
-        <h2>Ender Perez</h2>
-        <a href="#">Datos</a>
-        <a href="#">Configuracion</a>
-        <a href="#">Cerrar Sesion</a>
+        <h2>OnClick</h2>
+        <button id="button">Datos</button>
+        <button>Configuracion</button>
+        <button>Cerrar Sesion</button>
     </header>
-    <div>
 
-
-        <h1>CREAR NUEVO PROYECTO</h1>
-
+    <h1>CREAR NUEVO PROYECTO</h1>
+    <div class="form">
         <div class="new-slide-container">
-            <input id="slide-title-input" type="text" oninput="setName(this)" placeholder="escribe tu titulo">
-            <input id="slide-content-input" type="text" oninput="setparrafo(this)" placeholder="escribe parrafo">
-            <button id="guardar" onclick="guardar();">Guardar</button>
+            <input id="slide-title-input" type="text" oninput="setName(this)" placeholder="escribe tu titulo" required
+                minlength="4" maxlength="15" size="10">
         </div>
-
+        <div class="new-slide-container2">
+            <!-- <input id="slide-content-input" type="text" oninput="setparrafo(this)" placeholder="escribe parrafo" required
+                minlength="4" maxlength="500" size="10"> -->
+            <textarea name="parrafo" id="text" cols="30" rows="10" oninput="setparrafo(this)"
+                placeholder="escribe parrafo"></textarea>
+        </div>
+        <button id="guardar" onclick="guardar();">Guardar</button>
+        <button id="btn" onclick="createSlide()">nueva presentacion</button>
+    </div>
 
     <section id="slide-preview">
-        <button id="crear" onclick="createSlide();">Crear nueva</button>
         <div id="slide-draft" class="cuadro_blanco">
-            <h1 id="name-tag">TITULO</h1>
-            <div class="imagen">
-                <p id="parrafo-tag">Parrafo</p>
-                <img id="img_presen"
-                src="img/Foto.png"  
-                alt="imagen">
+            <h3 id="name-tag" class="inside">TITULO</h3>
+            <div class="flex">
+                <p id="parrafo-tag" class="inside" >Parrafo</p>
+                <div class="imagen">
+                    
+                    <img id="img_presen" src="img/Foto.png" alt="imagen"  class="inside">
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="slides">
 
     </section>
-    
+    <!-- <div class="card mb-3" style="max-width: 770px;">
+        <div class="row g-0">
+            <h3 id="name-tag">TITULO</h3>
+            <div class="col-xl-8 alert alert-warning">
+                <div class="card-body ">                  
+                  <p id="parrafo-tag">Parrafo</p>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <img id="img_presen"src="img/Foto.png" alt="imagen" class="imagent">
+            </div>        
+        </div>
+    </div> -->
+
+    <div id="slides">
+
+        <button href="javascript:void(0)" id="imprime">Imprime<button>
+    </div>
+
+
+
+
+
+
+
 
     <div class="container">
         <h1 class="heading"> buscar imagenes aqui</h1>
@@ -56,7 +99,7 @@
 
 
         <div class="image-container">
-            
+
             <div class="image" data-title="carro rojo">
                 <img onclick="carro1()" src="img/carro1.png" alt="">
                 <h3> carro rojo </h3>
@@ -97,9 +140,16 @@
 
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <iframe style="border:0;position:absolute;width:0px;height:0px;left:0px;top:0px;" id="printArea_1" src="saved_resource.html"></iframe></body></html> -->
 
-<script src="script.js"></script>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

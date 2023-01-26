@@ -1,0 +1,160 @@
+*{
+    margin: auto;
+    padding: 0;
+       
+
+}
+/* @media (max-width: 767px){
+    body {
+        background-color: blueviolet;
+    }
+}
+@media (max-width: 1000px){
+    body {
+        background-color: rgb(43, 43, 226);
+    }
+}
+@media (max-width: 1200px){
+    body {
+        background-color: rgb(207, 80, 16);
+    }
+} */
+
+
+header {
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    display: flex;
+    width: 100%;
+   
+}
+h2{
+    font-family: 'Dancing Script';
+    color: rgba(82, 51, 51, 0.896);
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(6, 139, 139);
+}
+h1{
+    width: 100%;
+    text-align: center;
+    color: rgb(53, 34, 35);
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(217, 214, 171); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(207, 206, 181), rgb(202, 202, 139)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(239, 240, 231), rgb(226, 226, 177)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(202, 221, 209), rgb(145, 145, 94)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(177, 205, 188), rgb(238, 238, 183)); /* Standard syntax */
+}
+.cuadro_blanco {
+    background-color: rgba(237, 231, 231, 0.784);
+    width: 50%;
+    height: auto;
+    margin: 10px 0 60px 25% ;
+    padding: 10px;
+
+}
+#parrafo-tag {
+    word-wrap:break-word;
+    height: 50%;
+    max-width: 50%;
+    margin-left: 50px;   
+    font-size: 40px;
+}
+#titulo {
+    margin: 50px 100px 10px 50px;
+}
+img {
+    width: 30%;
+}
+.imagen {
+    display: flex;
+}
+
+.selected-slide {
+    border:rgb(6, 139, 139) 10px solid;
+    border-radius: 10px;
+}
+
+button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #f5f185; /* Green */
+    border: none;
+    color: rgb(37, 35, 35);
+    padding-right: 50px;
+    padding-left: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    justify-content: end;
+    text-align: center;
+    
+}
+
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: rgb(245, 244, 243);
+}
+
+
+#crear {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+
+input {
+    
+        border: 2px solid rgb(79, 70, 70);
+        border-radius: 4px;
+        width: 50%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+h3 {
+    text-align: center;
+}
+
+.new-slide-container {
+    margin: 100px 0px 50px 500px;
+}
+
+.new-slide-container2 {
+    margin: 0px 0px 50px 500px;
+}
+
+#guardar {
+    margin-left: 610px;
+}
+
+#name-tag {
+    font-size: 60px;
+    font-family: fantasy;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: 660033;
+    background-color: cc3366;
+    cursor: move;
+    /* position: absolute; */
+    
+}
+#text {
+    width: 50%;
+}
+
+#imprime{
+    display: none;
+}
+#slide-draft{
+    border : solid black
+}
+.cuadro_blanco{
+    border : solid black
+}

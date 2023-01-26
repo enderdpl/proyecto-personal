@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:0px;
+}
+
+header {
+    background-color: rgb(192, 173, 151);
+    display: flex;
+    width: 200%;
+}
+h2{
+    margin-right: 300px;
+    margin-left: 20px;
+    color: rgba(82, 51, 51, 0.896);
+}
+a{
+    text-decoration: none;
+    padding: 7px;
+    color: rgb(6, 139, 139);
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(45, 77, 77);
+}
+h3 {
+    margin-top: 5px;
+    color: rgba(82, 51, 51, 0.896);
+    margin-right: 50px;
+    
+}
+
+.cuadros {
+    background-color: beige;
+    height: 300px;
+    width: 400px;
+    margin: 30px;
+    padding: 10px;
+}
+.proyect {
+    display: flex;
+}
+
+button {
+    background-color: burlywood;
+    border-radius: 10%;
+    color: rgb(77, 38, 11);
+    margin-left: 20px;
+    width: 100px;    
+}
+
+#navbarNavDropdown{
+    display: flex;
+    
+    text-align: right;
+}
